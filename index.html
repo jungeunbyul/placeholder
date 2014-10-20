@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="" />
+<title>Document</title>
+<style type="text/css">
+	span { position:relative; display:block; width:300px; height:28px;}
+	input { position:absolute; top:0; left:0; width:300px; height:28px; background:none; border:1px solid #ddd; z-index:2;}
+	label	 { position:absolute; top:7px; left:10px; z-index:1; color:#999;}
+	a { display:block;}
+</style>
+</head>
+<body>
+<span><label for="" class="placeTxt">검색어를 입력하세요</label><input type="text" name="" id="" class="placeHolder" /></span>
+<script type="text/javascript">
+		jQuery(function($){
+			$(".placeHolder").bind("focusin click",function(){
+				$(this).prev().hide();
+			});
+			$(".placeHolder").bind("focusout",function(){
+				if($(this).val()==0){ //val값이 없을 때
+					$(this).prev().show();
+				}else{
+					$(this).prev().hide();
+				};
+			});
+		});
+</script>
+</body>
+</html>
