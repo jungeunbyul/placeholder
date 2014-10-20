@@ -13,20 +13,22 @@
 </style>
 </head>
 <body>
+
 <span><label for="" class="placeTxt">검색어를 입력하세요</label><input type="text" name="" id="" class="placeHolder" /></span>
+
 <script type="text/javascript">
-		jQuery(function($){
-			$(".placeHolder").bind("focusin click",function(){
-				$(this).prev().hide();
-			});
-			$(".placeHolder").bind("focusout",function(){
-				if($(this).val()==0){ //val값이 없을 때
-					$(this).prev().show();
-				}else{
-					$(this).prev().hide();
-				};
-			});
-		});
+jQuery(function($){
+	$(".placeHolder").bind("focusin click",function(){
+		$(this).prev().hide();
+	});
+	$(".placeHolder").bind("focusout",function(){
+		if($(this).val()==0){ //val값이 없을 때
+			$(this).prev().show();
+		}else{
+			$(this).prev().hide();
+		};
+	});
+});
 </script>
 </body>
 </html>
