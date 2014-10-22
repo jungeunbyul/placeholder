@@ -1,5 +1,5 @@
 * placeholder 기능
-* 
+
 placeholder의 섬세한 디자인 적용이 불가능한 단점을 보완하고자 label을 이용한 제이쿼리 구현
 
 * 사용 방법
